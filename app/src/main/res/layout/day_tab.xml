@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/day_of_week_name"
+        style="@style/DayName"
+        android:text="Mo"/>
+
+    <TextView
+        android:id="@+id/day_of_month_number"
+        style="@style/DayNumber"
+        android:text="1"/>
+
+    <ImageView
+        android:id="@+id/day_icon"
+        style="@style/DayIcon"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/day_temp"
+        style="@style/DayTemp"
+        android:text="30 °C"
+        android:visibility="gone"/>
+
+</RelativeLayout>
