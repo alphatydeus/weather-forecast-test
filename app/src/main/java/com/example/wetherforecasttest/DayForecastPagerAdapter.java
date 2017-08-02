@@ -86,10 +86,10 @@ public class DayForecastPagerAdapter extends FragmentPagerAdapter {
     private List<List<com.example.wetherforecasttest.models.List>> extractDailyForecast(Forecast forecast) {
         List<List<com.example.wetherforecasttest.models.List>> dayForecast = new ArrayList<>();
         List<com.example.wetherforecasttest.models.List> hourForecast = new ArrayList<>();
+        dayForecast.add(hourForecast);
 
         for (com.example.wetherforecasttest.models.List list : forecast.getList()) {
-            Integer dt = list.getDt();
-            DateTime forecastDateTime = new DateTime().withMillis(dt * 1000L);
+            DateTime forecastDateTime = new DateTime().withMillis(list.getDt() * 1000L);
             if (mDateTime.getDayOfMonth() != forecastDateTime.getDayOfMonth()) {
                 hourForecast = new ArrayList<>();
                 dayForecast.add(hourForecast);
